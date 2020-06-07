@@ -13,8 +13,8 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get update -q && \
 	export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --no-install-recommends wget curl rsync netcat mg vim bzip2 zip unzip && \
-    apt-get install -yqq openbox tightvncserver novnc && \
-    apt-get install -y --no-install-recommends xterm firefox chromium-browser && \
+    apt-get install -yqq openbox tightvncserver novnc net-tools x11-apps && \
+    apt-get install -y --no-install-recommends xterm firefox chromium-browser htop && \
     apt-get install -y --no-install-recommends python-pip && \
     apt-get install -y --no-install-recommends libssl-dev && \
     apt-get autoclean -y && \
