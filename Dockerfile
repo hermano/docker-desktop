@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN echo "Europe/Rome" > /etc/timezone
+RUN echo "Europe/Berlin" > /etc/timezone
 # RUN sudo ln -fs /usr/share/zoneinfo/Europe/Rome /etc/localtime
 
 RUN apt-get update -q && \
@@ -13,10 +13,8 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get update -q && \
 	export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --no-install-recommends wget curl rsync netcat mg vim bzip2 zip unzip && \
-    apt-get install -y --no-install-recommends libx11-6 libxcb1 libxau6 && \
-    apt-get install -yqq lubuntu-desktop tightvncserver && \
-    apt-get install -y --no-install-recommends chromium-browser && \
-    apt-get install -y --no-install-recommends python-pip python-dev python-qt4 && \
+    apt-get install -yqq openbox tightvncserver novnc && \
+    apt-get install -y --no-install-recommends python-pip && \
     apt-get install -y --no-install-recommends libssl-dev && \
     apt-get autoclean -y && \
     apt-get autoremove -y && \
