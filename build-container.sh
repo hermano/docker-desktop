@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t docker-desktop .
+docker build -t stripped-desktop .
