@@ -1,4 +1,5 @@
 #!/bin/bash
 
-tar -cvzf student-home.tar.gz home
-docker build -t stripped-desktop .
+tar -cvzf user-home.tar.gz -C user/ $(ls -A1 user/)
+tar -cvzf root-home.tar.gz -C root/ $(ls -A1 root/)
+docker build -t stripped-desktop  .

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cvt 2560 1440 60
+xrandr --newmode "2560x1440_60.00"  312.25  2560 2752 3024 3488  1440 1443 1448 1493 -hsync +vsync
+xrandr --addmode VNC-0 2560x1440_60.00
+cvt 3200 1800 60
+xrandr --newmode "3200x1800_60.00"  492.00  3200 3456 3800 4400  1800 1803 1808 1865 -hsync +vsync
+xrandr --addmode VNC-0 "3200x1800_60.00"
+cvt 1366 768 60
+xrandr --newmode "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
+xrandr --addmode VNC-0 "1366x768_60.00"
+cvt 5120 2880 60
+xrandr --newmode "5120x2880_60.00"  1276.50  5120 5560 6128 7136  2880 2883 2888 2982 -hsync +vsync
+
